@@ -1,0 +1,44 @@
+STEP
+-New Project
+-composer require laravel/fortify
+-php artisan vendor:publish --provider="Laravel\\Fortify\\FortifyServiceProvider"
+-Migrate php artisan migrate
+
+BOOTSTRAP
+-You can install any frontend Frameworks -
+-Laravel doesnt  use postCss
+-Use Bootstrap  npm install bootstrap@next popper.js sass  sass-loader --save-dev
+-Use Bootstrap  npm install bootstrap popper.js sass  sass-loader --save-dev
+- Much better to do separate
+
+WEBPACK
+ -Laravel doesnt support postCss it use sass
+   mix.js('resources/js/app.js', 'public/js')
+       .sass('resources/sass/app.scss', 'public/css');
+-Create sass folder in resource  scss/app.scss
+-Import the bootstrap in app.scss
+   @import "~bootstrap/scss/bootstrap";
+
+NPM DEV
+npm run dev
+
+BUILD INTERFACE
+ <!--STYLES-->
+<link rel="stylesheet" href="{{ asset('css/app.css') }}" >
+
+<!--STYLES-->
+<script src="{{ asset('css/app.css') }}" defer></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
