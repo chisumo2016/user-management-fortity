@@ -63,7 +63,36 @@ Schema::table('role_user',function (Blueprint $table){
             $table->dropForeign('role_user_user_id_foreign');
 });
 
--Relationship in the Model
+-Relationship in the Model  btn roles and users
+
+SEEDING USERS AND ROLES USING FAKER
+-seeding database via many to many
+-we have Rolefactory and Roleseeder
+-Let us create a user seeder
+    php artisan make:seeder UserSeeder
+-User Tinker
+  User::factory()->make();
+  User::factory()->count(5)->make();
+-Faker Library
+  https://github.com/fzaninotto/Faker
+-Role Factory
+ Role::factory()->make();
+ Role::factory()->count(5)->make();
+
+-Add coded in each seeder
+-php artisan db:seed --class=RoleSeeder
+-Link to many to many relation
+    php artisan make:seeder RoleUserSeeder
+
+
+
+
+
+
+
+
+
+
 
 
 
