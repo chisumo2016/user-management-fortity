@@ -111,6 +111,12 @@ BUILD THE UI DASHBOARD TO DISPLAY THE USER
 
       return  view('admin.users.index',['users' => User::all()]);
 
+ADDING PAGINATION AND DELETING USERS
+-Go to tinker
+ php artisan tinker
+ User::factory()->count(50)->create();
+ -We need to let laravel know that we're using bootstrap not tailwinds
+ -Go AppServiceProvider
 
 
 
