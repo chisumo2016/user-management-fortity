@@ -49,8 +49,21 @@ B: BUILDING THE DASHBOARD UI USING BOOSTRAP 5
 -Build the login UI from copy from bootstrap
 -Create the logout functionality in the main/master app
 
+DESIGN DATABASE SCHEMA USING MIGRATION
+ -User &  Role
+ -Many to Many Relationship
+ -Pivot Table
+ -Role : attribute "name"
+ -php artisan make:model Role -a
+ -Pivot
+    php artisan make:migration create_role_user_table
 
+Schema::table('role_user',function (Blueprint $table){
+            $table->dropForeign('role_user_role_id_foreign');
+            $table->dropForeign('role_user_user_id_foreign');
+});
 
+-Relationship in the Model
 
 
 
