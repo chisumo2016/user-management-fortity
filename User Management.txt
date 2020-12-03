@@ -31,6 +31,38 @@ BUILD INTERFACE
 
 
 B: BUILDING THE DASHBOARD UI USING BOOSTRAP 5
+ -Building the dashboard from scratch
+ -Building the nav bar
+ -Go to sass /app.scss
+
+ C:USER REGISTRATION ,LOGIN & LOGOUT -FORTIFY
+ -Set  the laravel fortify
+ -register our fortify to config->app
+    App\Providers\FortifyServiceProvider::class,
+-Let laravel know where the fortify view gonna be
+   app/provider /fortifyServiceProvider
+     Fortify::registerView(function (){
+                return view('auth.register');
+     });
+
+-Build the register UI from copy from bootstrap
+-Build the login UI from copy from bootstrap
+-Create the logout functionality in the main/master app
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
