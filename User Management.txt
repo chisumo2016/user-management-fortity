@@ -94,9 +94,30 @@ BUILD THE UI DASHBOARD TO DISPLAY THE USER
   1:public where user can login and register
   2:user login and can see the certaion thing
   3:Admin can access the admin part
--Prefix
+-Prefix in route
   prefix the admin
-  prefxi the namespace
+  prefix the name
+
+
+
+  BUILDING THE CRUD GUI IN ADMIN PANEL
+
+  -get all user and pass to the view
+    return  view('admin.users.index')
+                ->with([
+                    'users'=>User::all(),
+                    'users'=>User::all(),
+     ]);
+
+      return  view('admin.users.index',['users' => User::all()]);
+
+
+
+
+
+
+
+
 
 
 
