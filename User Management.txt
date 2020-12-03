@@ -83,6 +83,24 @@ SEEDING USERS AND ROLES USING FAKER
 -php artisan db:seed --class=RoleSeeder
 -Link to many to many relation
     php artisan make:seeder RoleUserSeeder
+-Assigning roles to a user in RoleUserSeeder
+
+BUILD THE UI DASHBOARD TO DISPLAY THE USER
+-To display to admin user to be able to adminstarte the CRUD(USER)
+-Set the route
+-Create User Controller with Admin
+-php artisan make:controller Admin\\UserController -r
+-Route group
+  1:public where user can login and register
+  2:user login and can see the certaion thing
+  3:Admin can access the admin part
+-Prefix
+  prefix the admin
+  prefxi the namespace
+
+
+
+
 
 
 

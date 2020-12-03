@@ -15,6 +15,7 @@ class RoleUserSeeder extends Seeder
      */
     public function run()
     {
+        //Assigning role to user via many to many
         $roles = Role::all(); //this is collection
         User::all()->each(function ($user) use ($roles){
             //attach the roles from user table
