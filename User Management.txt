@@ -118,9 +118,32 @@ ADDING PAGINATION AND DELETING USERS
  -We need to let laravel know that we're using bootstrap not tailwinds
  -Go AppServiceProvider
 
+ASSIGN ROLES TO USERS , CREATING AND EDITING USERS
+-show the role on user UI
+-php artisan migrate:fresh --seed
+-Create blade and use partial to create and Edit
+-Error
+  ErrorException
+  Undefined offset: 1   problem  @foreach($roles $as $role) instead of  @foreach($roles as $role)
+  mark@penguindigital.co.uk
+  parameters: array:5 [▼
+        "_token" => "YOparIpyRYABba3vOj7UCPbLniqL29oLXno8JH1f"
+        "name" => "Bernard"
+        "email" => "mark@penguindigital.co.uk"
+        "password" => "password"
+        "roles" => array:2 [▼
+          0 => "1"
+          1 => "2"
+        ]
+-Use the mutator to hash the password in user model
+-Attach - one
+-SYNC  - ARRAY
 
-
-
+-Include has access the variables in the current page  ,component has access variable manually pass into it
+-create a folder inside the admin/users called partials
+    -name as form-blade.php
+Method Illuminate\Database\Eloquent\Collection::sync does not exist.
+$user->roles->sync($request->roles);  tobe $user->roles()->sync($request->roles);
 
 
 

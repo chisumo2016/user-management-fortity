@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Models\Role;
 use App\Models\User;
 use Illuminate\Http\Request;
 
@@ -26,7 +27,7 @@ class UserController extends Controller
      */
     public function create()
     {
-        //
+        return  view('admin.users.create',['roles'=> Role::all()]);
     }
 
     /**
@@ -37,7 +38,10 @@ class UserController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $user = User::create($request->except(['_token', 'roles']));
+        $user->roles()->sync($request->roles); //roles array again that user in the datbase
+        return  redirect(route('admin.users.index'));
+
     }
 
     /**
@@ -59,7 +63,12 @@ class UserController extends Controller
      */
     public function edit($id)
     {
-        //
+
+        return  view('admin.users.edit',
+            [
+            'roles' => Role::all(),
+            'user' => User::find($id)
+            ]);
     }
 
     /**
@@ -71,7 +80,12 @@ class UserController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        //get the user
+        $user = User::findOrFail($id);
+        $user->update($request->except(['_token','roles']));
+        $user->roles()->sync($request->roles);
+
+        return  redirect(route('admin.users.index'));
     }
 
     /**
