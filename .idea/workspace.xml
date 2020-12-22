@@ -1,15 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="3579af9e-9c6d-4695-a3e2-091ecc7d460e" name="Default Changelist" comment="" />
+    <list default="true" id="3579af9e-9c6d-4695-a3e2-091ecc7d460e" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/User Management.txt" beforeDir="false" afterPath="$PROJECT_DIR$/User Management.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Actions/Fortify/CreateNewUser.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Actions/Fortify/CreateNewUser.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/UserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/UserController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seeders/DatabaseSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeders/DatabaseSeeder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/templates/main.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/templates/main.blade.php" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ComposerSettings" synchronizationState="SYNCHRONIZE">
+  <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
     <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
     <execution />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="PhpWorkspaceProjectConfiguration">
     <include_path>
@@ -126,6 +136,7 @@
     </include_path>
   </component>
   <component name="ProjectId" id="1l8tuuYd7KEZFL7Bb8GnaKT9i6P" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -135,7 +146,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views/admin/users" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="reference.webide.settings.project.settings.php" />
+    <property name="settings.editor.selected.configurable" value="web-ide.project.structure" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
@@ -161,7 +172,8 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1606990771725</updated>
-      <workItem from="1606990772985" duration="19424000" />
+      <workItem from="1606990772985" duration="21292000" />
+      <workItem from="1608635681167" duration="1613000" />
     </task>
     <servers />
   </component>
@@ -173,9 +185,14 @@
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state x="435" y="242" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.23.1440.877@0.23.1440.877" timestamp="1607001585991" />
-    <state x="367" y="213" width="670" height="676" key="search.everywhere.popup" timestamp="1607022027039">
+    <state x="260" y="126" key="SettingsEditor" timestamp="1607079026139">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state x="367" y="213" width="670" height="676" key="search.everywhere.popup/0.23.1440.877@0.23.1440.877" timestamp="1607022027039" />
+    <state x="260" y="126" key="SettingsEditor/0.23.1440.877@0.23.1440.877" timestamp="1607079026139" />
+    <state x="367" y="215" width="670" height="675" key="search.everywhere.popup" timestamp="1608637054706">
+      <screen x="0" y="25" width="1440" height="875" />
+    </state>
+    <state x="367" y="213" width="670" height="676" key="search.everywhere.popup/0.23.1440.877@0.23.1440.877" timestamp="1607078783904" />
+    <state x="367" y="215" width="670" height="675" key="search.everywhere.popup/0.25.1440.875@0.25.1440.875" timestamp="1608637054706" />
   </component>
 </project>

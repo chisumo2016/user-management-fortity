@@ -147,7 +147,10 @@ $user->roles->sync($request->roles);  tobe $user->roles()->sync($request->roles)
 
 
 
-
+FLASH MESSAGE  AND FORM VALIDATION
+- create partials folder
+-Inside partials create alert.blade.php
+-
 
 
 
