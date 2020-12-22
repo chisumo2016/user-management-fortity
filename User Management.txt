@@ -150,7 +150,22 @@ $user->roles->sync($request->roles);  tobe $user->roles()->sync($request->roles)
 FLASH MESSAGE  AND FORM VALIDATION
 - create partials folder
 -Inside partials create alert.blade.php
--
+-We add the flash message in user controller store, edit and delete
+-We hook the flash message to display to a user in main blade
+
+
+PROTECTING PAGES WITH GATES
+ - use the gates
+ -First copy the nav and paste in main and remove the logo
+ -keep home and user links
+ -get rid of login and register
+ -In the fisrt link menu  to remove home and user
+ -Create how own gates
+    AppServiceProvider.php in boot
+     use Illuminate\Support\Facades\Gate;
+     -user view ,controller in middleware
+- we need to use the middleware to stop accessing pages
+-Auto the box laravel comes with middleware auth
 
 
 
