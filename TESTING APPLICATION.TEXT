@@ -1,0 +1,63 @@
+TESTING APPLICATIONS
+
+ADDING FEATURE TESTING TO LARAVEL APPLICATIONS
+
+Different Lavel of Testing
+  Acceptance Testing -QA TEAM
+  System Testing  - UI
+  Integration Testing - DEVELOPER
+  Unit Testing -small testing ,one   DEVELOPER
+
+  TESTS FOLDER IN LARAVEL
+    -Featured Test   Integration Testing
+    -Unit Test        Unit Testing
+
+RUN TEST
+php artisan test
+
+CREATE TEST
+php artisan make:test HomePageTest
+php artisan make:test LoginPageTest
+
+
+EMAIL NEW USERS TRO CREATE A PASSWORD
+
+-Password reset link
+-Test email
+-Test the laravel fortify
+     forttifyServiceProvider
+     usercontroller in store method
+-Fire
+-MailTrap
+ MAIL_MAILER=smtp
+ MAIL_HOST=smtp.mailtrap.io
+ MAIL_PORT=2525
+ MAIL_USERNAME=a380070a82f9c2
+ MAIL_PASSWORD=983b4620aa7bc8
+ MAIL_ENCRYPTION=tls
+-create the auth.reset-password
+-view -auth -copy register
+-Flash Message
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

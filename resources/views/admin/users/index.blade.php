@@ -2,7 +2,7 @@
 @section('content')
     <div class="row">
         <div class="col-md-12">
-            <h1 class="float-left">User</h1>
+            <h1 class="float-left">Users</h1>
             <a href="{{ route('admin.users.create') }}" class="btn btn-sm btn-success float-right" role="button">Create New User</a>
         </div>
     </div>
