@@ -20,8 +20,8 @@ php artisan make:test HomePageTest
 php artisan make:test LoginPageTest
 
 
-EMAIL NEW USERS TRO CREATE A PASSWORD
-
+EMAIL NEW USERS TRO CREATE A PASSWORD  (RESET PASSWORD)
+When the admin create a new user,the eamil will be send to user to create a new password via token
 -Password reset link
 -Test email
 -Test the laravel fortify
@@ -38,6 +38,43 @@ EMAIL NEW USERS TRO CREATE A PASSWORD
 -create the auth.reset-password
 -view -auth -copy register
 -Flash Message
+
+PASSWORD RESET EMAIL USING LARAVEL FORTIFY
+Any user to send the link tp reset the password without the admin created once
+-Use the laravel fortify
+-create the link
+-View -> auth -> login
+-App-FortifyServiceProvider
+-create the forgot password
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
