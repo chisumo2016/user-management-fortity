@@ -156,16 +156,75 @@ FLASH MESSAGE  AND FORM VALIDATION
 
 PROTECTING PAGES WITH GATES
  - use the gates
- -First copy the nav and paste in main and remove the logo
+ -Change the layout  a bit on layout navbar to show the login and register for all users even someone isnt login
+ -Show the logged menu one the user has been logged in
+ -First copy the all nav  bar  in the main layout
+ -and paste undernith to a the copy of the sec bar and remove the logo
  -keep home and user links
  -get rid of login and register
- -In the fisrt link menu  to remove home and user
+ -In the first link menu  to remove home and user
  -Create how own gates
     AppServiceProvider.php in boot
      use Illuminate\Support\Facades\Gate;
      -user view ,controller in middleware
+
+     if (Gate::denies('logged-in')){
+                 dd('no access allowed');
+     }
+
+-we can us to our view
+    @can('logged-in')
+     -----
+    @endcan
+
 - we need to use the middleware to stop accessing pages
 -Auto the box laravel comes with middleware auth
+  Route::prefix('admin')->middleware('auth')->name('admin.')->group(function (){
+      Route::resource('admin/users' ,UserController::class);
+      //Route::resource('admin/users' ,UserController::class);
+  });
+
+  PROTECTING PAGES USING ROLES
+  -create some method in user model
+  -creating some customs middleware
+  -restriction on certain part of application
+  -In the user model
+       /**
+        * Check if the user has role
+        * @param string $role
+        * @return bool
+        */
+       public  function  hasAnyRole(string  $role)  //admin author
+       {
+           return null !== $this->roles()->where('name',$role)->first();
+       }
+
+       /**
+        * Check the user has given role
+        * @param array $role
+        * @return bool
+        */
+       public  function  hasAnyRoles(array $role)  //admin author  taking arrays
+       {
+           return null !== $this->roles()->whereIn('name',$role)->first();
+       }
+- Under app - AuthServiceProvider
+    Gate::define('is-admin', function ($user){
+                return $user->hasAnyRole('admin');
+   });
+
+ -userController
+  if (Gate::allows('is-admin')){
+
+              return  view('admin.users.index', ['users' => User::paginate(10)]);
+  }
+
+THE BEST WAY
+- Customs Middleware
+  php artisan make:middleware  AccessAdmin
+ - register the middlware in the kernel
+     'auth.isAdmin'=>\App\Http\Middleware\AccessAdmin::class,
+-You can apply to our web routes
 
 
 
@@ -176,6 +235,100 @@ PROTECTING PAGES WITH GATES
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+cd ~/.composer/vendor/bin/
+ >pwd
+/Users/os/.composer/vendor/bin
+
+ export PATH=$HOME/bin:/usr/local/bin:$PATH
+
+>vim ~/.aliases
+
+alias gs='git status '
+alias ga='git add '
+alias gb='git branch '
+alias gc='git commit'
+alias gd='git diff'
+alias gco='git checkout '
+alias gk='gitk --all&'
+alias gx='gitx --all'
+
+alias got='git '
+alias get='git '
+alias nah="git reset --hard && git clean -df"
 
 
 

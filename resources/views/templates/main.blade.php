@@ -24,7 +24,7 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav mr-auto">
                 </ul>
-
+                <div class="form-inline my-2 my-lg-0">
                     @if(Route::has('login'))
                         <div>
                             @auth
@@ -46,6 +46,7 @@
                     @endif
                 </div>
             </div>
+        </div>
     </nav>
 
     @can('logged-in')
@@ -56,14 +57,17 @@
                         <li class="nav-item active">
                             <a class="nav-link" href="#">Home </a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="{{ route('admin.users.index') }}">Users</a>
-                        </li>
+                        @can('is-admin')
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ route('admin.users.index') }}">Users</a>
+                            </li>
+                        @endcan
                     </ul>
                 </div>
             </div>
         </nav>
     @endcan
+
       <main class="container">
           @include('partials.alert')
           @yield('content')

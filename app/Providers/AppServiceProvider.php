@@ -27,8 +27,6 @@ class AppServiceProvider extends ServiceProvider
     public function boot()
     {
         Paginator::useBootstrap();
-        Gate::define('logged-in', function ($user){
-            return $user;
-        });
+
     }
 }
