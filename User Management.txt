@@ -227,8 +227,14 @@ THE BEST WAY
 -You can apply to our web routes
 
 
+USER REGISTRATION USING FORTIFY ACTIONS
 
+-Use the fortify creation the user
+    App -> Actions->Fortify
 
+-added the input field in form called password_confirmation
+-Admin usercontroller -> store method use the forttify instance instead of customs
+-User model comments the setPasswordAttribute
 
 
 
