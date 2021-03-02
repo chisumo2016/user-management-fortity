@@ -45,7 +45,36 @@ Any user to send the link tp reset the password without the admin created once
 -create the link
 -View -> auth -> login
 -App-FortifyServiceProvider
--create the forgot password
+-create the forgot password UI copy login
+
+
+EMAIL VERIFICATION USING LARAVEL FORTIFY
+
+-OPTIONAL
+-Turn off/on middleware
+-First you need to check if the EmailVerification is on
+-Go app --- config  --- fortify
+
+ Features::emailVerification(),
+
+- User Model we should implement the interface
+     use Illuminate\Contracts\Auth\MustVerifyEmail;
+
+     implements MustVerifyEmail
+
+- add the view inside the Fortify Servoice provider
+-Create a view verify-email' user view Auth
+-php artisan route:cache
+https://stackoverflow.com/questions/64172138/laravel-8-how-do-i-verify-the-users-email-address-after-registration-without-ha
+
+
+
+
+
+
+
+
+
 
 
 
